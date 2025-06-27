@@ -34,5 +34,9 @@ jobs:
         with:
           name: listings-${{ github.run_id }}
           path: listings.csv
-          retention-days: 14
+          name: listings-${{ github.run_id }}
+          path: |
+            listings_*.csv   # all city-specific CSVs
+            data/*.csv       # if you ever write into data/
+         retention-days: 14
 
