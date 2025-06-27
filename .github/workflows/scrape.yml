@@ -12,6 +12,11 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     environment: projecthelper
+    env:
+      SUPABASE_URL:  ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY:  ${{ secrets.SUPABASE_KEY }}
+      RAPIDAPI_KEY:  ${{ secrets.RAPIDAPI_KEY }}
+      RAPIDAPI_HOST: ${{ secrets.RAPIDAPI_HOST }}
     concurrency:
       group: scrape
       cancel-in-progress: true
